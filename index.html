@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Maitri - Software Engineer showcasing projects, skills, tech stack, and experience.">
+    <meta name="author" content="Maitri">
+    <title>Maitri | Software Engineer Portfolio</title>
+
+    <!-- Stylesheet Link (placeholder for your CSS file) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon (placeholder) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <!-- Accessible Skip to Main Content Link -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- =================================================================
+         MOBILE TOP BAR (Visible only on mobile/tablet screens <= 1024px)
+         ================================================================= -->
+    <header class="mobile-top-bar" id="mobile-top-bar">
+        <a href="#hero" class="mobile-brand-logo" aria-label="Maitri Home">
+            <span class="logo-text">&lt;Maitri /&gt;</span>
+        </a>
+
+        <div class="mobile-top-actions">
+            <button id="mobile-menu-trigger" class="mobile-hamburger-btn" type="button" aria-label="Open Navigation Sidebar" aria-expanded="false" aria-controls="sidebar-nav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay Backdrop -->
+    <div id="sidebar-backdrop" class="sidebar-backdrop" aria-hidden="true"></div>
+
+    <!-- =================================================================
+         VERTICAL NAVIGATION SIDEBAR (Left Screen Dock / Slide-out Drawer)
+         Futuristic Glassmorphism, Neon Indicators, and Accessibility
+         ================================================================= -->
+    <aside id="sidebar-nav" class="vertical-sidebar" aria-label="Primary Vertical Navigation">
+        <div class="sidebar-inner">
+
+            <!-- 1. Top Profile / Logo Area -->
+            <div class="sidebar-profile-header">
+                <a href="#hero" class="sidebar-profile-link" title="Maitri's Portfolio Home">
+                    <div class="sidebar-avatar-wrapper">
+                        <img src="assets/profile.jpg" alt="Maitri Profile Avatar" class="sidebar-avatar-img" width="44" height="44">
+                        <span class="sidebar-status-glow" aria-hidden="true" title="Online / Open to Work"></span>
+                    </div>
+                    <div class="sidebar-profile-meta">
+                        <span class="sidebar-name">Maitri</span>
+                        <span class="sidebar-role-tag">CS Eng &bull; Dev</span>
+                    </div>
+                </a>
+
+                <!-- Mobile Close Button (Hidden on Desktop) -->
+                <button id="sidebar-close-btn" class="sidebar-close-btn" type="button" aria-label="Close Navigation Sidebar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- 2. Navigation Links List (10 Items) -->
+            <nav class="sidebar-nav-menu" aria-label="Portfolio Sections Navigation">
+                <ul class="sidebar-menu-list">
+                    <!-- 1. Home -->
+                    <li class="sidebar-menu-item">
+                        <a href="#hero" class="sidebar-link active" data-section="hero" aria-current="page">
+                            <span class="link-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                            </span>
+                            <span class="link-label">Home</span>
+                            <span class="active-indicator" aria-hidden="true"></span>
+                        </a>
+                    </li>
+
+                    <!-- 2. About Me -->
+                    <li class="sidebar-menu-item">
+                        <a href="#about" class="sidebar-link" data-section="about">
+                            <span class="link-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </span>
+                            <span class="link-label">About Me</span>
+                            <span class="active-indicator" aria-hidden="true"></span>
+                        </a>
+                    </li>
+
+                    <!-- 3. Skills -->
+                    <li class="sidebar-menu-item">
+                        <a href="#skills" class="sidebar-link" data-section="skills">
+                            <span class="link-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                            </span>
+                            <span class="link-label">Skills</span>
+                            <span class="active-indicator" aria-hidden="true"></span>
+                        </a>
+                    </li>
+
+                    <!-- 4. Tech Stack -->
+                    <li class="sidebar-menu-item">
+                        <a href="#tech-stack" class="sidebar-link" data-section="tech-stack">
+                            <span class="link-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </span>
+                            <span class="link-label">Tech Stack</span>
+                            <span class="active-indicator" aria-hidden="true"></span>
+                        </a>
+                    </li>
+
+                    <!-- 5. Timeline -->
+                    <li class="sidebar-menu-item">
+                        <a href="#timeline" class="sidebar-link" data-section="timeline">
+                            <span class="link-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </span>
+                            <span class="link-label">Timeline</span>
+                            <span class="active-indicator" aria-hidden="true"></span>
+                        </a>
+                    </li>
+
+                    <!-- 6. Projects -->
+                    <li class="sidebar-menu-item">
+                        <a href="#projects" class="sidebar-link" data-section="projects">
+                            <span class="link-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </span>
+                            <span class="link-label">Projects</span>
+                            <span class="active-indicator" aria-hidden="true"></span>
+                        </a>
+                    </li>
+
+                    <!-- 7. Achievements -->
+                    <li class="sidebar-menu-item">
+                        <a href="#achievements" class="sidebar-link" data-section="achievements">
+                            <span class="link-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                            </span>
+                            <span class="link-label">Achievements</span>
+                            <span class="active-indicator" aria-hidden="true"></span>
+                        </a>
+                    </li>
+
+                    <!-- 8. Testimonials -->
+                    <li class="sidebar-menu-item">
+                        <a href="#testimonials" class="sidebar-link" data-section="testimonials">
+                            <span class="link-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                </svg>
+                            </span>
+                            <span class="link-label">Testimonials</span>
+                            <span class="active-indicator" aria-hidden="true"></span>
+                        </a>
+                    </li>
+
+                    <!-- 9. Chat -->
+                    <li class="sidebar-menu-item">
+                        <a href="#chat" class="sidebar-link" data-section="chat">
+                            <span class="link-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+                                    <circle cx="12" cy="5" r="2"></circle>
+                                    <path d="M12 7v4"></path>
+                                    <line x1="8" y1="16" x2="8" y2="16"></line>
+                                    <line x1="16" y1="16" x2="16" y2="16"></line>
+                                </svg>
+                            </span>
+                            <span class="link-label">Chat</span>
+                            <span class="link-chip-neon" aria-hidden="true">AI</span>
+                            <span class="active-indicator" aria-hidden="true"></span>
+                        </a>
+                    </li>
+
+                    <!-- 10. Contact -->
+                    <li class="sidebar-menu-item">
+                        <a href="#contact" class="sidebar-link" data-section="contact">
+                            <span class="link-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </span>
+                            <span class="link-label">Contact</span>
+                            <span class="active-indicator" aria-hidden="true"></span>
+                        </a>
+                    </li>
+
+                    <!-- 11. Resume (Direct PDF Link) -->
+                    <li class="sidebar-menu-item">
+                        <a href="assets/Maitri_Resume.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link sidebar-resume-link" aria-label="View Maitri's Resume (PDF)">
+                            <span class="link-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                </svg>
+                            </span>
+                            <span class="link-label">Resume</span>
+                            <span class="link-chip-neon">PDF</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 3. Sidebar Bottom Area: Light / Dark Mode Toggle Switch -->
+            <div class="sidebar-footer">
+                <div class="sidebar-theme-control">
+                    <span class="theme-mode-label">Night Mode</span>
+                    <div class="theme-switch-wrapper" title="Toggle Light / Dark Mode">
+                        <input type="checkbox" id="theme-toggle-checkbox" class="theme-toggle-input" aria-label="Toggle Night Mode">
+                        <label for="theme-toggle-checkbox" class="theme-toggle-label">
+                            <span class="toggle-icon moon-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                            </span>
+                            <span class="toggle-icon sun-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </span>
+                            <span class="toggle-ball"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </aside>
+
+    <!-- =================================================================
+         MAIN CONTENT AREA
+         Houses all primary portfolio sections
+         ================================================================= -->
+    <main id="main-content">
+
+        <!-- =============================================================
+             1. HERO SECTION (Futuristic Glassmorphism & Soft Neon Design)
+             Features background image blending, glowing frame, and floating code elements
+             ============================================================= -->
+        <section id="hero" class="hero-section" aria-labelledby="hero-title">
+            <!-- Background Image Blend Layer -->
+            <div class="hero-bg-layer" aria-hidden="true"></div>
+
+            <!-- Soft Gradient Overlays for High Contrast & Readability -->
+            <div class="hero-overlay-gradient" aria-hidden="true"></div>
+            <div class="hero-overlay-radial" aria-hidden="true"></div>
+
+            <!-- Ambient Soft Neon Glow Orbs -->
+            <div class="neon-glow-orb neon-orb-1" aria-hidden="true"></div>
+            <div class="neon-glow-orb neon-orb-2" aria-hidden="true"></div>
+
+            <div class="container hero-container">
+                <!-- Left Content: Introduction, Title, Tagline, CTAs & Socials -->
+                <div class="hero-content">
+                    <!-- Welcoming Greeting Badge -->
+                    <div class="hero-greeting-pill">
+                        <span class="pulse-dot" aria-hidden="true"></span>
+                        <span>Hi, I’m Maitri</span>
+                    </div>
+
+                    <!-- Bold Main Title -->
+                    <h1 id="hero-title" class="hero-title">
+                        <span class="hero-name-gradient">Maitri</span>
+                    </h1>
+                    <h2 class="hero-role-title">
+                        Computer Science Engineering Student &amp; <span class="role-highlight">Software Developer</span>
+                    </h2>
+
+                    <!-- Engaging Tagline -->
+                    <p class="hero-tagline">
+                        Passionate about architecting high-performance web applications, clean-code systems, 
+                        and intuitive user experiences. Focused on transforming complex algorithmic challenges 
+                        into scalable, modern software.
+                    </p>
+
+                    <!-- Prominent Call To Action (CTA) Buttons -->
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-primary" id="hero-cta-work">
+                            <span class="btn-text">Explore My Work</span>
+                            <svg class="btn-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="assets/Maitri_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-resume" id="hero-cta-resume" aria-label="View Maitri's Resume (PDF)" title="View Resume PDF">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18" aria-hidden="true">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                            <span>Resume</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary" id="hero-cta-contact">
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+
+                    <!-- Small Social Media Icons / Links -->
+                    <div class="hero-socials-wrapper" aria-label="Social media profiles">
+                        <span class="socials-label">Connect:</span>
+                        <div class="social-icons-list">
+                            <!-- GitHub -->
+                            <a href="https://github.com/maitripujar18-art" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile" title="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/mohith-b-y-3ba157396?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+
+                            <!-- Twitter / X -->
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter Profile" title="Twitter / X">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                            </a>
+
+                            <!-- LeetCode / Coding Platform -->
+                            <a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Coding Profile" title="LeetCode / Problem Solving">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:maitripujar7@gmail.com" class="social-icon-btn" aria-label="Send Email" title="Email Me">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Media: Glassmorphic Profile Card & Floating Code Symbols -->
+                <div class="hero-media-wrapper">
+                    <div class="glass-profile-card">
+                        <!-- Profile Image with Neon Glowing Frame -->
+                        <div class="profile-image-frame">
+                            <img src="assets/profile.jpg" alt="Portrait photo of Maitri - Computer Science Engineering Student" class="hero-profile-img" width="360" height="360">
+                        </div>
+
+                        <!-- Status Badge Chip -->
+                        <div class="profile-status-chip">
+                            <span class="status-indicator-dot" aria-hidden="true"></span>
+                            <span>Open to Software Roles &bull; 2026</span>
+                        </div>
+
+                        <!-- Subtle Floating Decorative Code Elements -->
+                        <div class="floating-element float-tag-code" aria-hidden="true">&lt;/&gt;</div>
+                        <div class="floating-element float-brackets" aria-hidden="true">{ }</div>
+                        <div class="floating-element float-binary" aria-hidden="true">01001</div>
+                        <div class="floating-element float-angle" aria-hidden="true">&lt;&gt;</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             2. ABOUT SECTION
+             Personal background, philosophy, and professional summary
+             ============================================================= -->
+        <!-- =============================================================
+             2. ABOUT SECTION (Two-Column Futuristic Glassmorphism Layout)
+             Left: Glowing Profile Frame | Right: Personal Bio & Info Cards
+             ============================================================= -->
+        <section id="about" class="about-section" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get To Know Me</span>
+                    <h2 id="about-title" class="section-title">About Me</h2>
+                </div>
+
+                <div class="about-two-col-layout">
+                    <!-- Left Column: Profile Photo in Glowing Glassmorphism Frame -->
+                    <div class="about-photo-column">
+                        <div class="about-glass-card">
+                            <div class="about-photo-frame">
+                                <img src="assets/profile.jpg" alt="Maitri - Computer Science Engineering Student" class="about-profile-img" width="340" height="340" loading="lazy">
+                                <div class="about-frame-glow-ring" aria-hidden="true"></div>
+                            </div>
+                            <!-- Mini floating status tag or card badge -->
+                            <div class="about-photo-badge">
+                                <span class="pulse-dot" aria-hidden="true"></span>
+                                <span>CSE Student &bull; Aspiring Software Pro</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Personal Introduction, Bio, Info Cards & Journey CTA -->
+                    <div class="about-content-column">
+                        <div class="about-bio-card">
+                            <h3 class="about-bio-headline">
+                                Driven by curiosity, code, and continuous learning.
+                            </h3>
+                            <p class="about-bio-text">
+                                I am a Computer Science Engineering student with a passion for technology, learning new skills, and exploring the world of software development. I completed my high school education at St. Anne’s School, Haveri, and completed my Pre-University education at Chetan PU College, Hubli. I am currently pursuing my Engineering degree in Computer Science and Engineering at Adichunchanagiri Institute of Technology, Chikkamagaluru.
+                            </p>
+                            <p class="about-bio-text">
+                                I enjoy learning about programming, developing creative projects, participating in technical activities and hackathons, and improving my problem-solving skills. My goal is to continuously learn new technologies and grow into a skilled software professional.
+                            </p>
+
+                            <!-- Attractive Glassmorphism Information Cards Grid -->
+                            <div class="about-info-grid">
+                                <!-- Card 1: School -->
+                                <div class="info-card">
+                                    <div class="info-card-icon" aria-hidden="true">🎓</div>
+                                    <div class="info-card-content">
+                                        <span class="info-card-label">School</span>
+                                        <strong class="info-card-value">St. Anne’s School, Haveri</strong>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2: PU -->
+                                <div class="info-card">
+                                    <div class="info-card-icon" aria-hidden="true">📚</div>
+                                    <div class="info-card-content">
+                                        <span class="info-card-label">Pre-University (PU)</span>
+                                        <strong class="info-card-value">Chetan PU College, Hubli</strong>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3: Degree -->
+                                <div class="info-card">
+                                    <div class="info-card-icon" aria-hidden="true">💻</div>
+                                    <div class="info-card-content">
+                                        <span class="info-card-label">Degree</span>
+                                        <strong class="info-card-value">Computer Science &amp; Engineering</strong>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4: College -->
+                                <div class="info-card">
+                                    <div class="info-card-icon" aria-hidden="true">🏫</div>
+                                    <div class="info-card-content">
+                                        <span class="info-card-label">College</span>
+                                        <strong class="info-card-value">Adichunchanagiri Institute of Technology, Chikkamagaluru</strong>
+                                    </div>
+                                </div>
+
+                                <!-- Card 5: Current Focus -->
+                                <div class="info-card">
+                                    <div class="info-card-icon" aria-hidden="true">🚀</div>
+                                    <div class="info-card-content">
+                                        <span class="info-card-label">Current Focus</span>
+                                        <strong class="info-card-value">Learning programming and building projects</strong>
+                                    </div>
+                                </div>
+
+                                <!-- Card 6: Goal -->
+                                <div class="info-card">
+                                    <div class="info-card-icon" aria-hidden="true">🌱</div>
+                                    <div class="info-card-content">
+                                        <span class="info-card-label">Goal</span>
+                                        <strong class="info-card-value">Becoming a skilled software professional</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- About Actions: Journey CTA & Resume Download -->
+                            <div class="about-actions">
+                                <a href="assets/Maitri_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-resume" id="about-resume-btn" aria-label="View Maitri's Resume (PDF)">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="17" height="17" aria-hidden="true">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    </svg>
+                                    <span>Download Resume</span>
+                                </a>
+                                <a href="#timeline" class="btn btn-secondary btn-journey" id="about-journey-btn">
+                                    <span>My Journey</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             3. SKILLS SECTION – INTERACTIVE TECH LAB
+             Digital laboratory cards, Skill Explorer panel, Currently Learning, and Strengths
+             ============================================================= -->
+        <section id="skills" class="skills-section tech-lab-section" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Interactive Tech Lab</span>
+                    <h2 id="skills-title" class="section-title">Skills &amp; Technology Explorer</h2>
+                    <p class="section-description">
+                        Step inside my digital technology laboratory. Each card represents a language, web tool, 
+                        or fundamental concept I build with or learn. Click any card to inspect laboratory details.
+                    </p>
+                </div>
+
+                <!-- Lab Category Filter Tabs -->
+                <div class="lab-filter-bar" role="tablist" aria-label="Filter skills by category">
+                    <button type="button" class="lab-filter-btn active" data-filter="all" role="tab" aria-selected="true">
+                        <span>🧪 All Modules</span>
+                    </button>
+                    <button type="button" class="lab-filter-btn" data-filter="programming" role="tab" aria-selected="false">
+                        <span>💻 Programming</span>
+                    </button>
+                    <button type="button" class="lab-filter-btn" data-filter="web" role="tab" aria-selected="false">
+                        <span>🌐 Web Tech</span>
+                    </button>
+                    <button type="button" class="lab-filter-btn" data-filter="database" role="tab" aria-selected="false">
+                        <span>🗄️ Database</span>
+                    </button>
+                    <button type="button" class="lab-filter-btn" data-filter="tools" role="tab" aria-selected="false">
+                        <span>🛠️ Tools</span>
+                    </button>
+                    <button type="button" class="lab-filter-btn" data-filter="concepts" role="tab" aria-selected="false">
+                        <span>🧠 Core Concepts</span>
+                    </button>
+                </div>
+
+                <!-- Interactive Skill Explorer Expandable Inspection Panel -->
+                <div id="skill-expandable-panel" class="skill-explorer-panel" aria-live="polite" hidden>
+                    <div class="panel-header">
+                        <div class="panel-identity">
+                            <span class="panel-icon" id="panel-tech-icon" aria-hidden="true">💡</span>
+                            <div>
+                                <h3 class="panel-title" id="panel-tech-title">Technology Name</h3>
+                                <span class="panel-category-badge" id="panel-tech-category">Category</span>
+                            </div>
+                        </div>
+                        <button type="button" id="panel-close-btn" class="panel-close-btn" aria-label="Close details panel">&times;</button>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel-desc-block">
+                            <h4 class="panel-subtitle">Laboratory Purpose &amp; Focus:</h4>
+                            <p id="panel-tech-desc" class="panel-text">Description goes here.</p>
+                        </div>
+                        <div class="panel-details-grid">
+                            <div class="panel-detail-item">
+                                <span class="detail-label">Key Topics &amp; Mastery</span>
+                                <span class="detail-value" id="panel-tech-topics">Pointers, Memory, Structures</span>
+                            </div>
+                            <div class="panel-detail-item">
+                                <span class="detail-label">Practical Applications</span>
+                                <span class="detail-value" id="panel-tech-application">Coursework algorithms &amp; labs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Technology Laboratory Cards Grid -->
+                <div class="tech-lab-grid" id="tech-lab-grid">
+
+                    <!-- ===== CATEGORY 1: PROGRAMMING ===== -->
+                    <!-- 1. C -->
+                    <div class="lab-card" data-category="programming" role="button" tabindex="0" aria-expanded="false"
+                         data-name="C Language" data-category-name="Programming" data-icon="⚙️"
+                         data-desc="Used for understanding low-level memory architecture, pointer manipulation, and foundational procedural programming in computer science."
+                         data-topics="Pointers, Dynamic Memory (malloc/free), Structs, File I/O, Bitwise Ops"
+                         data-app="System programming coursework, algorithm complexity implementations.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">⚙️</span>
+                            <span class="category-pill">Programming</span>
+                        </div>
+                        <h3 class="card-tech-title">C</h3>
+                        <p class="card-tech-desc">Foundational system programming, manual memory management, and procedural algorithms.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. C++ -->
+                    <div class="lab-card" data-category="programming" role="button" tabindex="0" aria-expanded="false"
+                         data-name="C++" data-category-name="Programming" data-icon="⚡"
+                         data-desc="Used for Object-Oriented Programming (OOP), high-performance computing, and Standard Template Library (STL) algorithms."
+                         data-topics="OOP (Inheritance, Polymorphism, Encapsulation), STL Containers, Iterators, Templates"
+                         data-app="Competitive programming, data structures labs, performance-sensitive modules.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">⚡</span>
+                            <span class="category-pill">Programming</span>
+                        </div>
+                        <h3 class="card-tech-title">C++</h3>
+                        <p class="card-tech-desc">Object-oriented programming, Standard Template Library (STL), and high-speed algorithm execution.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Java -->
+                    <div class="lab-card" data-category="programming" role="button" tabindex="0" aria-expanded="false"
+                         data-name="Java" data-category-name="Programming" data-icon="☕"
+                         data-desc="Used for enterprise OOP principles, platform-independent bytecode execution, multithreading, and collections framework."
+                         data-topics="Core Java, Collections Framework, Multithreading, Exception Handling, JVM Internals"
+                         data-app="Academic software projects, OOP curriculum implementations, backend application prototypes.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">☕</span>
+                            <span class="category-pill">Programming</span>
+                        </div>
+                        <h3 class="card-tech-title">Java</h3>
+                        <p class="card-tech-desc">Robust class-based OOP design, JVM ecosystem, multi-threading, and collections architecture.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. Python -->
+                    <div class="lab-card" data-category="programming" role="button" tabindex="0" aria-expanded="false"
+                         data-name="Python" data-category-name="Programming" data-icon="🐍"
+                         data-desc="Used for rapid prototyping, computational problem solving, data handling, scripting, and backend web logic."
+                         data-topics="Data Structures (Lists, Tuples, Dicts), List Comprehensions, File Automation, Modules"
+                         data-app="Automation scripts, algorithm prototyping, academic hackathon submissions.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">🐍</span>
+                            <span class="category-pill">Programming</span>
+                        </div>
+                        <h3 class="card-tech-title">Python</h3>
+                        <p class="card-tech-desc">Concise syntax for fast development, scripting, data manipulation, and modern web backends.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- ===== CATEGORY 2: WEB TECHNOLOGIES ===== -->
+                    <!-- 5. HTML -->
+                    <div class="lab-card" data-category="web" role="button" tabindex="0" aria-expanded="false"
+                         data-name="HTML5" data-category-name="Web Technologies" data-icon="🌐"
+                         data-desc="Used for crafting semantic, accessible, SEO-optimized, and well-structured web document hierarchies."
+                         data-topics="Semantic Elements (header, nav, main, section), ARIA Attributes, Form Validations"
+                         data-app="Portfolio structures, responsive page layouts, accessible web templates.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">🌐</span>
+                            <span class="category-pill">Web Tech</span>
+                        </div>
+                        <h3 class="card-tech-title">HTML5</h3>
+                        <p class="card-tech-desc">Semantic document structure, web accessibility (a11y), and standardized layout markup.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- 6. CSS -->
+                    <div class="lab-card" data-category="web" role="button" tabindex="0" aria-expanded="false"
+                         data-name="CSS3" data-category-name="Web Technologies" data-icon="🎨"
+                         data-desc="Used for futuristic UI styling, responsive design (Flexbox/Grid), glassmorphism visuals, and keyframe animations."
+                         data-topics="Flexbox, CSS Grid, Custom Properties (Variables), Backdrop Filters, Keyframe Animations"
+                         data-app="Modern dark/light themes, neon glowing components, responsive mobile-first styling.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">🎨</span>
+                            <span class="category-pill">Web Tech</span>
+                        </div>
+                        <h3 class="card-tech-title">CSS3</h3>
+                        <p class="card-tech-desc">Modern glassmorphism aesthetics, Flexbox/Grid systems, responsive design, and smooth animations.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- 7. JavaScript -->
+                    <div class="lab-card" data-category="web" role="button" tabindex="0" aria-expanded="false"
+                         data-name="JavaScript (ES6+)" data-category-name="Web Technologies" data-icon="🚀"
+                         data-desc="Used for dynamic client-side interactions, asynchronous API handling, event listeners, and interactive UI behavior."
+                         data-topics="ES6+ Syntax, Async/Await, Fetch API, DOM Manipulation, Event Propagation, LocalStorage"
+                         data-app="Interactive web applications, dark mode switches, dynamic search and filter UIs.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">🚀</span>
+                            <span class="category-pill">Web Tech</span>
+                        </div>
+                        <h3 class="card-tech-title">JavaScript</h3>
+                        <p class="card-tech-desc">Client-side interactivity, asynchronous operations, DOM manipulation, and dynamic data rendering.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- ===== CATEGORY 3: DATABASE ===== -->
+                    <!-- 8. MySQL -->
+                    <div class="lab-card" data-category="database" role="button" tabindex="0" aria-expanded="false"
+                         data-name="MySQL" data-category-name="Database" data-icon="🗄️"
+                         data-desc="Used for relational database management, schema normalization, multi-table joins, queries, and ACID transactional integrity."
+                         data-topics="SQL Queries, DDL/DML, Primary/Foreign Keys, Joins, Normalization (1NF to 3NF), Indexing"
+                         data-app="Backend database management, student registration databases, relational data modeling.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">🗄️</span>
+                            <span class="category-pill">Database</span>
+                        </div>
+                        <h3 class="card-tech-title">MySQL</h3>
+                        <p class="card-tech-desc">Relational schema design, SQL queries, table indexing, normalization, and persistent transactional storage.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- ===== CATEGORY 4: TOOLS ===== -->
+                    <!-- 9. Git -->
+                    <div class="lab-card" data-category="tools" role="button" tabindex="0" aria-expanded="false"
+                         data-name="Git" data-category-name="Tools" data-icon="🌿"
+                         data-desc="Used for version control, tracking changes, atomic commits, branching, merging, and codebase history management."
+                         data-topics="Git Branch, Merge, Rebase, Commit Conventions, Stashing, Merge Conflict Resolution"
+                         data-app="Version-controlled engineering projects, collaborative coding, rollback management.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">🌿</span>
+                            <span class="category-pill">Tools</span>
+                        </div>
+                        <h3 class="card-tech-title">Git</h3>
+                        <p class="card-tech-desc">Distributed version control, branch management, atomic commits, and team collaboration workflows.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- 10. GitHub -->
+                    <div class="lab-card" data-category="tools" role="button" tabindex="0" aria-expanded="false"
+                         data-name="GitHub" data-category-name="Tools" data-icon="🐙"
+                         data-desc="Used for cloud repository hosting, Pull Requests, code reviews, open-source collaboration, and project documentation."
+                         data-topics="Pull Requests, Remote Repos, Code Reviews, GitHub Pages, Markdown READMEs, Issues"
+                         data-app="Project hosting, open-source repositories, portfolio showcase deployment.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">🐙</span>
+                            <span class="category-pill">Tools</span>
+                        </div>
+                        <h3 class="card-tech-title">GitHub</h3>
+                        <p class="card-tech-desc">Cloud code hosting, pull request workflows, repository collaboration, and portfolio deployment.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- 11. VS Code -->
+                    <div class="lab-card" data-category="tools" role="button" tabindex="0" aria-expanded="false"
+                         data-name="VS Code" data-category-name="Tools" data-icon="🛠️"
+                         data-desc="Used as my primary development editor with debugging, integrated terminal, extension ecosystem, and linting."
+                         data-topics="Debugging Workflows, Extensions, Multi-cursor Editing, Integrated Terminal, Snippets"
+                         data-app="Daily coding environment across C++, Python, JavaScript, and web development.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">🛠️</span>
+                            <span class="category-pill">Tools</span>
+                        </div>
+                        <h3 class="card-tech-title">VS Code</h3>
+                        <p class="card-tech-desc">Integrated code editing, real-time debugging, extension workflows, and terminal management.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- ===== CATEGORY 5: CORE CONCEPTS ===== -->
+                    <!-- 12. Data Structures -->
+                    <div class="lab-card" data-category="concepts" role="button" tabindex="0" aria-expanded="false"
+                         data-name="Data Structures" data-category-name="Core Concepts" data-icon="🌳"
+                         data-desc="Used for organizing, storing, and accessing data efficiently to optimize time and memory performance."
+                         data-topics="Arrays, Linked Lists, Stacks, Queues, Binary Trees, BST, Graphs, Hash Tables"
+                         data-app="Coursework lab implementations, optimized search and retrieval algorithms.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">🌳</span>
+                            <span class="category-pill">Core Concepts</span>
+                        </div>
+                        <h3 class="card-tech-title">Data Structures</h3>
+                        <p class="card-tech-desc">Arrays, linked lists, stacks, queues, trees, and graphs engineered for optimal computational efficiency.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- 13. Problem Solving -->
+                    <div class="lab-card" data-category="concepts" role="button" tabindex="0" aria-expanded="false"
+                         data-name="Problem Solving" data-category-name="Core Concepts" data-icon="🧩"
+                         data-desc="Used for deconstructing ambiguous challenges into discrete algorithmic logic and writing clean, scalable solutions."
+                         data-topics="Divide &amp; Conquer, Greedy Methods, Dynamic Programming, Big-O Complexity Analysis"
+                         data-app="Competitive coding challenges, hackathons, logic optimization exercises.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">🧩</span>
+                            <span class="category-pill">Core Concepts</span>
+                        </div>
+                        <h3 class="card-tech-title">Problem Solving</h3>
+                        <p class="card-tech-desc">Analytical decomposition, algorithmic logic, time/space complexity analysis (Big-O), and coding sprints.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- 14. Computer Networks -->
+                    <div class="lab-card" data-category="concepts" role="button" tabindex="0" aria-expanded="false"
+                         data-name="Computer Networks" data-category-name="Core Concepts" data-icon="📡"
+                         data-desc="Used to understand distributed data flow, socket communication, Internet architecture, and data transmission protocols."
+                         data-topics="OSI 7-Layer Model, TCP/IP, HTTP/HTTPS, DNS, Routing Algorithms, Socket Basics"
+                         data-app="Client-server applications, REST API communications, network security basics.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">📡</span>
+                            <span class="category-pill">Core Concepts</span>
+                        </div>
+                        <h3 class="card-tech-title">Computer Networks</h3>
+                        <p class="card-tech-desc">OSI &amp; TCP/IP protocols, client-server models, HTTP/HTTPS workflows, and distributed routing.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- 15. DBMS -->
+                    <div class="lab-card" data-category="concepts" role="button" tabindex="0" aria-expanded="false"
+                         data-name="DBMS" data-category-name="Core Concepts" data-icon="💾"
+                         data-desc="Used for understanding relational database design, transactions, data concurrency, and system integrity."
+                         data-topics="Relational Algebra, ACID Properties, Transaction Concurrency, ER Modeling, Normal Forms"
+                         data-app="Database course projects, data modeling, backend persistent storage design.">
+                        <div class="card-ambient-glow" aria-hidden="true"></div>
+                        <div class="card-header-row">
+                            <span class="tech-icon-box" aria-hidden="true">💾</span>
+                            <span class="category-pill">Core Concepts</span>
+                        </div>
+                        <h3 class="card-tech-title">DBMS</h3>
+                        <p class="card-tech-desc">Relational algebra, ACID properties, transaction concurrency control, and schema integrity modeling.</p>
+                        <div class="card-footer-action">
+                            <span class="click-hint">Click to inspect lab details &rarr;</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- =========================================================
+                     CURRENTLY LEARNING AREA (With Animated Learning Mode)
+                     ========================================================= -->
+                <div class="currently-learning-card">
+                    <div class="learning-card-header">
+                        <div class="learning-mode-indicator">
+                            <span class="learning-radar-dot" aria-hidden="true"></span>
+                            <span class="learning-mode-text">Learning Mode Active &bull; 2026 Focus</span>
+                        </div>
+                        <h3 class="learning-heading">Technologies Currently Improving</h3>
+                        <p class="learning-subtext">Actively expanding my computer science repertoire through deep-dive coursework, personal projects, and developer labs.</p>
+                    </div>
+
+                    <div class="learning-items-grid">
+                        <div class="learning-item">
+                            <span class="learning-item-icon">⚛️</span>
+                            <div class="learning-item-text">
+                                <strong>React.js &amp; Modern Frameworks</strong>
+                                <span>Building modular component architectures, hooks, and reactive UI applications.</span>
+                            </div>
+                        </div>
+
+                        <div class="learning-item">
+                            <span class="learning-item-icon">📐</span>
+                            <div class="learning-item-text">
+                                <strong>Advanced Algorithms &amp; System Design</strong>
+                                <span>Strengthening dynamic programming, graph algorithms, and architectural scalability.</span>
+                            </div>
+                        </div>
+
+                        <div class="learning-item">
+                            <span class="learning-item-icon">☁️</span>
+                            <div class="learning-item-text">
+                                <strong>Backend APIs &amp; Cloud Integration</strong>
+                                <span>Learning RESTful API construction, server architecture, and cloud deployment pipelines.</span>
+                            </div>
+                        </div>
+
+                        <div class="learning-item">
+                            <span class="learning-item-icon">🐳</span>
+                            <div class="learning-item-text">
+                                <strong>DevOps &amp; Containerization</strong>
+                                <span>Exploring Docker containers, CI/CD automated builds, and Linux server management.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =========================================================
+                     MY STRENGTHS AREA
+                     Personal & professional competencies
+                     ========================================================= -->
+                <div class="strengths-wrapper">
+                    <div class="section-header strengths-header">
+                        <span class="section-subtitle">Core Attributes</span>
+                        <h3 class="section-title strengths-title">My Strengths</h3>
+                        <p class="section-description">Essential soft and professional skills that empower my engineering workflow and team collaborations.</p>
+                    </div>
+
+                    <div class="strengths-grid">
+                        <!-- Strength 1 -->
+                        <div class="strength-card">
+                            <div class="strength-icon-box" aria-hidden="true">🧩</div>
+                            <h4 class="strength-title">Problem Solving</h4>
+                            <p class="strength-desc">Breaking down intricate, ambiguous challenges into clean, structured algorithmic steps.</p>
+                        </div>
+
+                        <!-- Strength 2 -->
+                        <div class="strength-card">
+                            <div class="strength-icon-box" aria-hidden="true">🎨</div>
+                            <h4 class="strength-title">Creativity</h4>
+                            <p class="strength-desc">Bringing inventive perspective to interface design, feature workflows, and practical user experience.</p>
+                        </div>
+
+                        <!-- Strength 3 -->
+                        <div class="strength-card">
+                            <div class="strength-icon-box" aria-hidden="true">🤝</div>
+                            <h4 class="strength-title">Teamwork</h4>
+                            <p class="strength-desc">Collaborating effectively in multi-disciplinary groups, hackathons, and sprint-based project delivery.</p>
+                        </div>
+
+                        <!-- Strength 4 -->
+                        <div class="strength-card">
+                            <div class="strength-icon-box" aria-hidden="true">💬</div>
+                            <h4 class="strength-title">Communication</h4>
+                            <p class="strength-desc">Explaining technical architectures clearly through written documentation, code comments, and demos.</p>
+                        </div>
+
+                        <!-- Strength 5 -->
+                        <div class="strength-card">
+                            <div class="strength-icon-box" aria-hidden="true">⚡</div>
+                            <h4 class="strength-title">Quick Learning</h4>
+                            <p class="strength-desc">Swiftly absorbing new programming paradigms, developer libraries, and engineering tools.</p>
+                        </div>
+
+                        <!-- Strength 6 -->
+                        <div class="strength-card">
+                            <div class="strength-icon-box" aria-hidden="true">🔄</div>
+                            <h4 class="strength-title">Adaptability</h4>
+                            <p class="strength-desc">Thriving amidst evolving technical requirements, unexpected edge cases, and changing platforms.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             4. TECH STACK SECTION (Dedicated)
+             Categorized technologies, tools, and ongoing learnings
+             ============================================================= -->
+        <section id="tech-stack" class="tech-stack-section" aria-labelledby="tech-stack-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">My Technical Toolkit</span>
+                    <h2 id="tech-stack-title" class="section-title">Tech Stack</h2>
+                    <p class="section-description">
+                        A comprehensive look at the programming languages, frameworks, libraries, 
+                        databases, and developer tools I build with and am currently exploring.
+                    </p>
+                </div>
+
+                <div class="tech-stack-grid">
+
+                    <!-- Category 1: Programming Languages -->
+                    <div class="tech-category-card">
+                        <div class="category-header">
+                            <span class="category-icon" aria-hidden="true">💻</span>
+                            <h3 class="category-title">Programming Languages</h3>
+                        </div>
+                        <ul class="tech-items-list">
+                            <li class="tech-badge">
+                                <span class="tech-name">JavaScript (ES6+)</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">TypeScript</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Python</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Java</span>
+                                <span class="badge-status familiar">Familiar</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">C++ / C</span>
+                                <span class="badge-status familiar">Familiar</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Go (Golang)</span>
+                                <span class="badge-status learning">Currently Learning</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 2: Frontend -->
+                    <div class="tech-category-card">
+                        <div class="category-header">
+                            <span class="category-icon" aria-hidden="true">🎨</span>
+                            <h3 class="category-title">Frontend Development</h3>
+                        </div>
+                        <ul class="tech-items-list">
+                            <li class="tech-badge">
+                                <span class="tech-name">HTML5 &amp; Semantic Web</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">CSS3 &amp; Flexbox / Grid</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">React.js</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Next.js</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Tailwind CSS</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Vue.js</span>
+                                <span class="badge-status learning">Currently Learning</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 3: Backend -->
+                    <div class="tech-category-card">
+                        <div class="category-header">
+                            <span class="category-icon" aria-hidden="true">⚙️</span>
+                            <h3 class="category-title">Backend Development</h3>
+                        </div>
+                        <ul class="tech-items-list">
+                            <li class="tech-badge">
+                                <span class="tech-name">Node.js</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Express.js</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Django / FastAPI</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">RESTful APIs</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">GraphQL</span>
+                                <span class="badge-status familiar">Familiar</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Microservices Architecture</span>
+                                <span class="badge-status learning">Currently Learning</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 4: Databases -->
+                    <div class="tech-category-card">
+                        <div class="category-header">
+                            <span class="category-icon" aria-hidden="true">🗄️</span>
+                            <h3 class="category-title">Databases &amp; Caching</h3>
+                        </div>
+                        <ul class="tech-items-list">
+                            <li class="tech-badge">
+                                <span class="tech-name">PostgreSQL</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">MySQL</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">MongoDB</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Redis</span>
+                                <span class="badge-status familiar">Familiar</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Prisma ORM</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Firebase / Supabase</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 5: Tools & DevOps -->
+                    <div class="tech-category-card">
+                        <div class="category-header">
+                            <span class="category-icon" aria-hidden="true">🛠️</span>
+                            <h3 class="category-title">Tools, DevOps &amp; Platforms</h3>
+                        </div>
+                        <ul class="tech-items-list">
+                            <li class="tech-badge">
+                                <span class="tech-name">Git &amp; GitHub</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Docker</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Postman</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Linux / Bash</span>
+                                <span class="badge-status proficient">Proficient</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">AWS (S3, EC2)</span>
+                                <span class="badge-status familiar">Familiar</span>
+                            </li>
+                            <li class="tech-badge">
+                                <span class="tech-name">Kubernetes</span>
+                                <span class="badge-status learning">Currently Learning</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             5. TIMELINE SECTION
+             Work experience, education, internships, and milestones
+             ============================================================= -->
+        <!-- =============================================================
+             5. TIMELINE SECTION – MY JOURNEY SO FAR
+             Interactive digital journey path with glowing checkpoints
+             ============================================================= -->
+        <section id="timeline" class="timeline-section journey-section" aria-labelledby="timeline-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Digital Journey Path</span>
+                    <h2 id="timeline-title" class="section-title">My Journey So Far</h2>
+                    <p class="section-description">
+                        Tracing my educational foundation, engineering discoveries, and future goals along a digital pathway. 
+                        Click any milestone checkpoint to expand its highlights and learnings.
+                    </p>
+                </div>
+
+                <!-- Digital Journey Pathway Container -->
+                <div class="journey-pathway-wrapper">
+                    <!-- Glowing Neon Background Track Line -->
+                    <div class="journey-track-line" aria-hidden="true"></div>
+
+                    <div class="journey-milestones-list">
+
+                        <!-- Milestone 1: School Years -->
+                        <div class="journey-milestone-node" data-milestone="1">
+                            <div class="checkpoint-node" aria-hidden="true">
+                                <span class="checkpoint-core"></span>
+                                <span class="checkpoint-ring"></span>
+                            </div>
+                            <div class="journey-checkpoint-card" role="button" tabindex="0" aria-expanded="false">
+                                <div class="milestone-badge-row">
+                                    <span class="milestone-icon" aria-hidden="true">🏫</span>
+                                    <span class="milestone-period">Foundational Education</span>
+                                    <span class="milestone-expand-indicator" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="milestone-heading">📍 School Years – St. Anne’s School, Haveri</h3>
+                                <p class="milestone-summary">
+                                    Completed my high school education and developed my basic academic foundation.
+                                </p>
+                                <!-- Expandable Details Section -->
+                                <div class="milestone-expandable-content" hidden>
+                                    <div class="expandable-inner">
+                                        <div class="detail-pill-group">
+                                            <span class="detail-pill">📚 Academic Foundation</span>
+                                            <span class="detail-pill">📐 Mathematics &amp; Science</span>
+                                            <span class="detail-pill">💡 Curiosity for Logic</span>
+                                        </div>
+                                        <p class="detail-desc-text">
+                                            Built strong disciplines in mathematics and basic sciences, participating actively in school academic exhibitions, quizzes, and fostering an early fascination with how computers work.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 2: PU Journey -->
+                        <div class="journey-milestone-node" data-milestone="2">
+                            <div class="checkpoint-node" aria-hidden="true">
+                                <span class="checkpoint-core"></span>
+                                <span class="checkpoint-ring"></span>
+                            </div>
+                            <div class="journey-checkpoint-card" role="button" tabindex="0" aria-expanded="false">
+                                <div class="milestone-badge-row">
+                                    <span class="milestone-icon" aria-hidden="true">📚</span>
+                                    <span class="milestone-period">Pre-University (PU)</span>
+                                    <span class="milestone-expand-indicator" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="milestone-heading">📍 PU Journey – Chetan PU College, Hubli</h3>
+                                <p class="milestone-summary">
+                                    Completed my Pre-University education and became more interested in technology and engineering.
+                                </p>
+                                <!-- Expandable Details Section -->
+                                <div class="milestone-expandable-content" hidden>
+                                    <div class="expandable-inner">
+                                        <div class="detail-pill-group">
+                                            <span class="detail-pill">🔬 PCMC Stream</span>
+                                            <span class="detail-pill">⚡ Analytical Reasoning</span>
+                                            <span class="detail-pill">🎯 Engineering Aspiration</span>
+                                        </div>
+                                        <p class="detail-desc-text">
+                                            Studied Physics, Chemistry, Mathematics, and Computer Science. Discovered the thrill of writing code and problem-solving, solidifying my ambition to pursue Computer Science &amp; Engineering.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 3: Engineering -->
+                        <div class="journey-milestone-node" data-milestone="3">
+                            <div class="checkpoint-node" aria-hidden="true">
+                                <span class="checkpoint-core"></span>
+                                <span class="checkpoint-ring"></span>
+                            </div>
+                            <div class="journey-checkpoint-card" role="button" tabindex="0" aria-expanded="false">
+                                <div class="milestone-badge-row">
+                                    <span class="milestone-icon" aria-hidden="true">🎓</span>
+                                    <span class="milestone-period">Undergraduate Degree (B.E.)</span>
+                                    <span class="milestone-expand-indicator" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="milestone-heading">📍 Engineering – Adichunchanagiri Institute of Technology, Chikkamagaluru</h3>
+                                <p class="milestone-summary">
+                                    Currently pursuing Computer Science and Engineering and exploring programming, web development, and computer science concepts.
+                                </p>
+                                <!-- Expandable Details Section -->
+                                <div class="milestone-expandable-content" hidden>
+                                    <div class="expandable-inner">
+                                        <div class="detail-pill-group">
+                                            <span class="detail-pill">💻 B.E. in CSE</span>
+                                            <span class="detail-pill">🌳 Data Structures &amp; OOP</span>
+                                            <span class="detail-pill">🌐 Modern Web Stack</span>
+                                        </div>
+                                        <p class="detail-desc-text">
+                                            Deepening expertise in core computer science domains including Data Structures, Algorithms, DBMS, Operating Systems, and Object-Oriented Design, coupled with practical software laboratory projects.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 4: Exploring Technology (Present Milestone with "You Are Here") -->
+                        <div class="journey-milestone-node current-node" data-milestone="4">
+                            <div class="checkpoint-node current-checkpoint" aria-hidden="true">
+                                <span class="checkpoint-core"></span>
+                                <span class="checkpoint-ring active-pulse"></span>
+                            </div>
+                            <div class="journey-checkpoint-card current-active-card" role="button" tabindex="0" aria-expanded="false">
+                                <div class="milestone-badge-row">
+                                    <span class="milestone-icon" aria-hidden="true">🚀</span>
+                                    <!-- Animated 'You Are Here' Indicator -->
+                                    <div class="you-are-here-badge">
+                                        <span class="radar-ping" aria-hidden="true"></span>
+                                        <span>📍 You Are Here &bull; Present</span>
+                                    </div>
+                                    <span class="milestone-expand-indicator" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="milestone-heading">📍 Exploring Technology – Present</h3>
+                                <p class="milestone-summary">
+                                    Learning new programming languages, developing projects, participating in technical activities, and improving my problem-solving skills.
+                                </p>
+                                <!-- Expandable Details Section -->
+                                <div class="milestone-expandable-content" hidden>
+                                    <div class="expandable-inner">
+                                        <div class="detail-pill-group">
+                                            <span class="detail-pill">⚡ Full-Stack Web Projects</span>
+                                            <span class="detail-pill">🧩 LeetCode Problem Solving</span>
+                                            <span class="detail-pill">🏆 Hackathons &amp; Sprints</span>
+                                        </div>
+                                        <p class="detail-desc-text">
+                                            Actively building hands-on applications, learning JavaScript/TypeScript ecosystems, mastering Git/GitHub workflows, refining competitive coding problem-solving, and collaborating with peers on technical challenges.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 5: Future Goal -->
+                        <div class="journey-milestone-node" data-milestone="5">
+                            <div class="checkpoint-node" aria-hidden="true">
+                                <span class="checkpoint-core"></span>
+                                <span class="checkpoint-ring"></span>
+                            </div>
+                            <div class="journey-checkpoint-card" role="button" tabindex="0" aria-expanded="false">
+                                <div class="milestone-badge-row">
+                                    <span class="milestone-icon" aria-hidden="true">🌟</span>
+                                    <span class="milestone-period">Horizon &bull; Future Goal</span>
+                                    <span class="milestone-expand-indicator" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <h3 class="milestone-heading">📍 Future Goal – Coming Soon</h3>
+                                <p class="milestone-summary">
+                                    Continue learning advanced technologies, build meaningful projects, participate in more hackathons, and grow into a skilled software professional.
+                                </p>
+                                <!-- Expandable Details Section -->
+                                <div class="milestone-expandable-content" hidden>
+                                    <div class="expandable-inner">
+                                        <div class="detail-pill-group">
+                                            <span class="detail-pill">💼 Software Engineer Role</span>
+                                            <span class="detail-pill">☁️ Distributed Systems &amp; Cloud</span>
+                                            <span class="detail-pill">🌐 Open-Source Contributions</span>
+                                        </div>
+                                        <p class="detail-desc-text">
+                                            Aiming to join dynamic engineering teams, contribute to scalable software solutions, master cloud architectures, and make positive contributions to developer communities worldwide.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Final Journey Continuation Message & CTA -->
+                <div class="journey-continuation-card">
+                    <div class="continuation-content">
+                        <span class="continuation-icon" aria-hidden="true">✨</span>
+                        <h3 class="continuation-title">The journey continues…</h3>
+                        <p class="continuation-desc">
+                            Discover the applications, prototypes, and technical solutions I have engineered along this learning path.
+                        </p>
+                        <a href="#projects" class="btn btn-primary btn-continuation" id="timeline-projects-cta">
+                            <span>Explore My Projects</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             6. PROJECTS SECTION
+             Featured software projects with links, previews, and tech tags
+             ============================================================= -->
+        <!-- =============================================================
+             6. PROJECTS SECTION – INTERACTIVE PROJECT GALAXY
+             Floating glass panels, glowing constellation paths, SIH 2026 featured badge
+             ============================================================= -->
+        <section id="projects" class="projects-section galaxy-section" aria-labelledby="projects-title">
+            <!-- Galaxy Ambient Background Elements -->
+            <div class="galaxy-ambient-backdrop" aria-hidden="true">
+                <div class="galaxy-core-glow"></div>
+                <div class="galaxy-orbital-ring ring-1"></div>
+                <div class="galaxy-orbital-ring ring-2"></div>
+                <div class="galaxy-particle p-1"></div>
+                <div class="galaxy-particle p-2"></div>
+                <div class="galaxy-particle p-3"></div>
+                <div class="galaxy-particle p-4"></div>
+                <div class="galaxy-particle p-5"></div>
+            </div>
+
+            <div class="container galaxy-container">
+                <div class="section-header">
+                    <span class="section-subtitle">Digital Innovation Lab</span>
+                    <h2 id="projects-title" class="section-title">Project Galaxy</h2>
+                    <p class="section-description">
+                        Explore featured engineering solutions designed as interactive celestial nodes in a digital galaxy. 
+                        Click any floating project panel or &ldquo;View Details&rdquo; to expand system architecture, tech stacks, and key takeaways.
+                    </p>
+                </div>
+
+                <!-- Animated Constellation Connection Lines (SVG) -->
+                <div class="galaxy-constellation-track" aria-hidden="true">
+                    <svg class="constellation-svg" viewBox="0 0 1000 300" fill="none" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="galaxyBeamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.2"/>
+                                <stop offset="50%" stop-color="#bd00ff" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.2"/>
+                            </linearGradient>
+                            <filter id="neonBeamGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feMerge>
+                                    <feMergeNode in="blur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <!-- Orbital Connecting Arc between cards -->
+                        <path class="constellation-line" d="M 250,150 Q 500,40 750,150" stroke="url(#galaxyBeamGrad)" stroke-width="2.5" stroke-dasharray="8 6" filter="url(#neonBeamGlow)"/>
+                        <!-- Celestial Node Anchor Points -->
+                        <circle class="constellation-star star-1" cx="250" cy="150" r="5" fill="#00f2fe" />
+                        <circle class="constellation-star star-mid" cx="500" cy="95" r="4" fill="#bd00ff" />
+                        <circle class="constellation-star star-2" cx="750" cy="150" r="5" fill="#00f2fe" />
+                    </svg>
+                </div>
+
+                <!-- Galaxy Cards Layout -->
+                <div class="galaxy-cards-grid">
+
+                    <!-- PROJECT 01: MindCare (Featured SIH 2026) -->
+                    <article class="galaxy-card featured-galaxy-card" id="project-card-mindcare" data-project-id="mindcare" role="button" tabindex="0" aria-haspopup="dialog" aria-expanded="false" aria-label="MindCare Project Card. Press Enter to view full details.">
+                        <!-- Shimmer Border Ambient Glow -->
+                        <div class="galaxy-card-glow" aria-hidden="true"></div>
+
+                        <!-- Top Galaxy Node Status Bar -->
+                        <div class="galaxy-card-meta-top">
+                            <div class="galaxy-category-badge">
+                                <span class="galaxy-cat-icon" aria-hidden="true">🧠</span>
+                                <span>AI Healthcare &bull; Assistive Tech</span>
+                            </div>
+                            <div class="galaxy-badges-wrapper">
+                                <!-- Featured Project Badge -->
+                                <span class="badge-featured" title="Developed for Smart India Hackathon 2026">
+                                    <span class="badge-star-icon" aria-hidden="true">★</span>
+                                    <span>Featured Project</span>
+                                </span>
+                                <!-- SIH 2026 Badge -->
+                                <span class="badge-sih">
+                                    <span class="badge-pulse-dot" aria-hidden="true"></span>
+                                    <span>SIH 2026</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Project Banner Image -->
+                        <div class="galaxy-preview-container">
+                            <img src="assets/mindcare-preview.jpg" alt="MindCare AI Cognitive Gaming & Memory Assistance Platform Preview" class="galaxy-preview-img" loading="lazy">
+                            <div class="galaxy-preview-overlay">
+                                <span class="galaxy-orbital-tag">Project 01 &bull; Orbital Node</span>
+                                <span class="galaxy-view-hint">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16" aria-hidden="true">
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <polyline points="9 21 3 21 3 15"></polyline>
+                                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                                    </svg>
+                                    Click to Expand Details
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Card Content Body -->
+                        <div class="galaxy-card-body">
+                            <div class="galaxy-title-row">
+                                <span class="project-cosmic-icon" aria-hidden="true">🚀</span>
+                                <div>
+                                    <h3 class="galaxy-project-title">MindCare: AI-Based Cognitive Gaming &amp; Memory Assistance Platform</h3>
+                                    <p class="galaxy-focus-tag"><strong>Focus:</strong> Dementia care and elderly cognitive support</p>
+                                </div>
+                            </div>
+
+                            <p class="galaxy-project-desc">
+                                A technology-based platform designed to support elderly people with dementia through cognitive games, 
+                                memory activities, regional language support, voice interaction, and caregiver assistance.
+                            </p>
+
+                            <!-- Key Highlight Features -->
+                            <div class="galaxy-features-group">
+                                <span class="features-label">Key Highlights:</span>
+                                <div class="features-pill-list">
+                                    <span class="feature-pill">🧠 Cognitive &amp; memory games</span>
+                                    <span class="feature-pill">🌐 Regional language support</span>
+                                    <span class="feature-pill">🎤 Voice interaction</span>
+                                    <span class="feature-pill">👨‍👩‍👧 Caregiver support</span>
+                                    <span class="feature-pill">🎯 Personalized activities</span>
+                                </div>
+                            </div>
+
+                            <!-- Tech Stack Pills -->
+                            <div class="galaxy-tech-stack">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">TensorFlow AI</span>
+                                <span class="tech-pill">Web Speech API</span>
+                                <span class="tech-pill">React</span>
+                                <span class="tech-pill">Node.js</span>
+                                <span class="tech-pill">MongoDB</span>
+                            </div>
+
+                            <!-- Project Status and Actions Footer -->
+                            <div class="galaxy-card-footer">
+                                <div class="project-status-box">
+                                    <span class="status-radar-beacon active" aria-hidden="true"></span>
+                                    <span class="status-text">Status: <strong>Hackathon Innovation &bull; Active</strong></span>
+                                </div>
+
+                                <div class="galaxy-actions-group">
+                                    <button type="button" class="btn btn-sm btn-outline galaxy-details-btn" data-project-target="mindcare" aria-label="View full details for MindCare">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                        </svg>
+                                        <span>View Details</span>
+                                    </button>
+                                    <a href="https://github.com/maitripujar18-art" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary galaxy-view-btn" aria-label="View MindCare Project Demo and Repository">
+                                        <span>View Project</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 02: Ninu (Book Review Platform) -->
+                    <article class="galaxy-card" id="project-card-ninu" data-project-id="ninu" role="button" tabindex="0" aria-haspopup="dialog" aria-expanded="false" aria-label="Ninu Project Card. Press Enter to view full details.">
+                        <!-- Shimmer Border Ambient Glow -->
+                        <div class="galaxy-card-glow" aria-hidden="true"></div>
+
+                        <!-- Top Galaxy Node Status Bar -->
+                        <div class="galaxy-card-meta-top">
+                            <div class="galaxy-category-badge">
+                                <span class="galaxy-cat-icon" aria-hidden="true">📚</span>
+                                <span>Web Platform &bull; Community</span>
+                            </div>
+                            <div class="galaxy-badges-wrapper">
+                                <span class="badge-personal">
+                                    <span class="badge-mini-spark" aria-hidden="true">✦</span>
+                                    <span>Personal &bull; Mini Project</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Project Banner Image -->
+                        <div class="galaxy-preview-container">
+                            <img src="assets/ninu-preview.jpg" alt="Ninu Book Review Platform Preview" class="galaxy-preview-img" loading="lazy">
+                            <div class="galaxy-preview-overlay">
+                                <span class="galaxy-orbital-tag">Project 02 &bull; Orbital Node</span>
+                                <span class="galaxy-view-hint">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16" aria-hidden="true">
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <polyline points="9 21 3 21 3 15"></polyline>
+                                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                                    </svg>
+                                    Click to Expand Details
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Card Content Body -->
+                        <div class="galaxy-card-body">
+                            <div class="galaxy-title-row">
+                                <span class="project-cosmic-icon" aria-hidden="true">📖</span>
+                                <div>
+                                    <h3 class="galaxy-project-title">Ninu: Book Review Platform</h3>
+                                    <p class="galaxy-focus-tag"><strong>Focus:</strong> Books and reader reviews</p>
+                                </div>
+                            </div>
+
+                            <p class="galaxy-project-desc">
+                                A simple and engaging platform where users can explore books, read reviews, 
+                                and share their own opinions and ratings about books.
+                            </p>
+
+                            <!-- Key Highlight Features -->
+                            <div class="galaxy-features-group">
+                                <span class="features-label">Key Highlights:</span>
+                                <div class="features-pill-list">
+                                    <span class="feature-pill">📖 Book listings</span>
+                                    <span class="feature-pill">⭐ Ratings and reviews</span>
+                                    <span class="feature-pill">🔍 Book search</span>
+                                    <span class="feature-pill">💬 Reader opinions</span>
+                                    <span class="feature-pill">📚 Book details</span>
+                                </div>
+                            </div>
+
+                            <!-- Tech Stack Pills -->
+                            <div class="galaxy-tech-stack">
+                                <span class="tech-pill">JavaScript (ES6+)</span>
+                                <span class="tech-pill">HTML5 &amp; CSS3</span>
+                                <span class="tech-pill">Node.js</span>
+                                <span class="tech-pill">Express</span>
+                                <span class="tech-pill">MySQL</span>
+                                <span class="tech-pill">REST APIs</span>
+                            </div>
+
+                            <!-- Project Status and Actions Footer -->
+                            <div class="galaxy-card-footer">
+                                <div class="project-status-box">
+                                    <span class="status-radar-beacon completed" aria-hidden="true"></span>
+                                    <span class="status-text">Status: <strong>Completed &bull; Live Platform</strong></span>
+                                </div>
+
+                                <div class="galaxy-actions-group">
+                                    <button type="button" class="btn btn-sm btn-outline galaxy-details-btn" data-project-target="ninu" aria-label="View full details for Ninu">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                        </svg>
+                                        <span>View Details</span>
+                                    </button>
+                                    <a href="https://github.com/maitripujar18-art" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary galaxy-view-btn" aria-label="View Ninu Project Demo and Repository">
+                                        <span>View Project</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- 'More Projects Coming Soon…' Element -->
+                <div class="galaxy-coming-soon-card">
+                    <div class="coming-soon-orbital-accent" aria-hidden="true"></div>
+                    <div class="coming-soon-content">
+                        <div class="coming-soon-beacon">
+                            <span class="beacon-pulse" aria-hidden="true"></span>
+                            <span class="beacon-icon" aria-hidden="true">🌌</span>
+                        </div>
+                        <div class="coming-soon-text">
+                            <h3 class="coming-soon-title">More Projects Coming Soon…</h3>
+                            <p class="coming-soon-desc">
+                                My development journey is continuing! I am currently designing and experimenting with 
+                                distributed systems, AI-powered developer utilities, and modern cloud applications.
+                            </p>
+                            <div class="coming-soon-tags">
+                                <span class="future-tag">⚡ Cloud Distributed Systems</span>
+                                <span class="future-tag">🤖 Generative AI Tools</span>
+                                <span class="future-tag">🌐 Open Source Collaborations</span>
+                                <span class="future-tag">🏆 Hackathon Sprints</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- =============================================================
+                 EXPANDED GLASSMORPHISM PROJECT INSPECTOR MODAL
+                 Reveals full project description, role, tech stack, challenges & learnings
+                 ============================================================= -->
+            <div id="galaxy-modal-backdrop" class="galaxy-modal-backdrop" aria-hidden="true" hidden>
+                <div class="galaxy-modal-wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+                    <div class="galaxy-modal-glass-card" id="galaxy-modal-content">
+                        <!-- Top Header with Close Button -->
+                        <div class="modal-glass-header">
+                            <div class="modal-meta-row">
+                                <span class="modal-project-badge" id="modal-project-badge">Featured Project &bull; SIH 2026</span>
+                                <span class="modal-category-text" id="modal-project-category">AI Healthcare</span>
+                            </div>
+                            <button type="button" class="modal-close-btn" id="galaxy-modal-close" aria-label="Close Project Details Dialog">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="20" height="20" aria-hidden="true">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Main Modal Body -->
+                        <div class="modal-glass-body">
+                            <!-- Hero Title and Banner -->
+                            <div class="modal-title-area">
+                                <div class="modal-icon-title">
+                                    <span class="modal-icon" id="modal-project-icon" aria-hidden="true">🚀</span>
+                                    <h3 class="modal-title" id="modal-project-title">Project Title</h3>
+                                </div>
+                                <p class="modal-subtitle" id="modal-project-subtitle">Focus &amp; Overview</p>
+                            </div>
+
+                            <div class="modal-banner-frame">
+                                <img src="" alt="Project Banner" class="modal-banner-img" id="modal-project-banner">
+                            </div>
+
+                            <!-- Tabs / Information Sections -->
+                            <div class="modal-sections-grid">
+                                <!-- Section 1: Complete Description -->
+                                <div class="modal-info-block full-span">
+                                    <h4 class="modal-block-heading">
+                                        <span class="block-icon" aria-hidden="true">📋</span> Complete Project Description
+                                    </h4>
+                                    <p class="modal-block-text" id="modal-project-full-desc"></p>
+                                </div>
+
+                                <!-- Section 2: My Role -->
+                                <div class="modal-info-block">
+                                    <h4 class="modal-block-heading">
+                                        <span class="block-icon" aria-hidden="true">👩‍💻</span> My Role &amp; Responsibilities
+                                    </h4>
+                                    <p class="modal-block-text" id="modal-project-role"></p>
+                                </div>
+
+                                <!-- Section 3: Technologies Used -->
+                                <div class="modal-info-block">
+                                    <h4 class="modal-block-heading">
+                                        <span class="block-icon" aria-hidden="true">🛠️</span> Technologies Used
+                                    </h4>
+                                    <div class="modal-tech-pills" id="modal-project-tech-list"></div>
+                                </div>
+
+                                <!-- Section 4: Challenges Faced -->
+                                <div class="modal-info-block">
+                                    <h4 class="modal-block-heading">
+                                        <span class="block-icon" aria-hidden="true">⚡</span> Challenges Faced
+                                    </h4>
+                                    <p class="modal-block-text" id="modal-project-challenges"></p>
+                                </div>
+
+                                <!-- Section 5: What I Learned -->
+                                <div class="modal-info-block">
+                                    <h4 class="modal-block-heading">
+                                        <span class="block-icon" aria-hidden="true">💡</span> What I Learned
+                                    </h4>
+                                    <p class="modal-block-text" id="modal-project-learnings"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal Footer Action Bar -->
+                        <div class="modal-glass-footer">
+                            <button type="button" class="btn btn-outline modal-return-btn" id="galaxy-modal-dismiss-btn">
+                                Close Inspector
+                            </button>
+                            <a href="https://github.com/maitripujar18-art" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-action-btn" id="modal-project-external-link">
+                                <span>Visit Repository / Demo</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16" aria-hidden="true">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             7. ACHIEVEMENTS SECTION
+             Honors, certifications, hackathon awards, and recognitions
+             ============================================================= -->
+        <section id="achievements" class="achievements-section" aria-labelledby="achievements-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Recognition &amp; Milestones</span>
+                    <h2 id="achievements-title" class="section-title">Achievements</h2>
+                </div>
+
+                <div class="achievements-grid">
+                    <!-- Achievement 1 -->
+                    <div class="achievement-card">
+                        <div class="achievement-icon" aria-hidden="true">🏆</div>
+                        <h3 class="achievement-title">1st Place - National Hackathon 2024</h3>
+                        <p class="achievement-issuer">Issued by TechCorp Innovations</p>
+                        <p class="achievement-details">
+                            Built an AI-assisted accessibility reader for visually impaired users within 36 hours among 150+ teams.
+                        </p>
+                    </div>
+
+                    <!-- Achievement 2 -->
+                    <div class="achievement-card">
+                        <div class="achievement-icon" aria-hidden="true">📜</div>
+                        <h3 class="achievement-title">AWS Certified Solutions Architect</h3>
+                        <p class="achievement-issuer">Amazon Web Services</p>
+                        <p class="achievement-details">
+                            Validated expertise in designing distributed, resilient, and fault-tolerant cloud infrastructures on AWS.
+                        </p>
+                    </div>
+
+                    <!-- Achievement 3 -->
+                    <div class="achievement-card">
+                        <div class="achievement-icon" aria-hidden="true">🌟</div>
+                        <h3 class="achievement-title">Open Source Contributor</h3>
+                        <p class="achievement-issuer">GitHub Community</p>
+                        <p class="achievement-details">
+                            Authored bug fixes and documentation improvements in prominent open-source web frameworks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             8. TESTIMONIALS SECTION
+             Interactive Carousel for Teacher, Teammate, Mentor & Project Feedback
+             ============================================================= -->
+        <section id="testimonials" class="testimonials-section" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Endorsements &amp; Recommendations</span>
+                    <h2 id="testimonials-title" class="section-title">Testimonials</h2>
+                    <p class="section-description">
+                        Genuine feedback from academic faculty, hackathon teammates, engineering mentors, and project collaborators.
+                    </p>
+                </div>
+
+                <!-- Testimonials Carousel Container -->
+                <div class="testimonials-carousel-container" id="testimonials-carousel">
+                    <!-- Navigation Controls: Prev / Next -->
+                    <button type="button" class="carousel-control-btn prev-btn" id="carousel-prev" aria-label="Previous Testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20" aria-hidden="true">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="testimonials-carousel-track-wrapper">
+                        <div class="testimonials-carousel-track" id="carousel-track">
+
+                            <!-- Slide 1: Teacher / Professor Feedback (Editable Placeholder) -->
+                            <div class="testimonial-slide active" data-slide="0" data-category="teacher" data-editable="true">
+                                <div class="testimonial-glass-card">
+                                    <div class="testimonial-card-glow" aria-hidden="true"></div>
+                                    <div class="testimonial-card-header">
+                                        <div class="testimonial-role-badge teacher-badge">
+                                            <span class="role-icon" aria-hidden="true">🎓</span>
+                                            <span>Teacher / Professor Feedback</span>
+                                        </div>
+                                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                    <blockquote class="testimonial-quote">
+                                        &ldquo;Maitri’s strong foundation in Computer Science principles, data structures, and algorithms is matched by her relentless curiosity. She consistently demonstrates top-tier discipline in academic coursework and actively helps fellow students debug complex code with enthusiasm.&rdquo;
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar-badge teacher-avatar">DR</div>
+                                        <div class="author-info">
+                                            <h3 class="author-name">Dr. Rajesh Verma</h3>
+                                            <p class="author-role">Professor, Dept. of Computer Science &bull; AIT Chikkamagaluru</p>
+                                        </div>
+                                    </div>
+                                    <span class="editable-placeholder-tag" title="Easily customizable placeholder content">✎ Editable Placeholder</span>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: Teammate Feedback (Editable Placeholder) -->
+                            <div class="testimonial-slide" data-slide="1" data-category="teammate" data-editable="true">
+                                <div class="testimonial-glass-card">
+                                    <div class="testimonial-card-glow" aria-hidden="true"></div>
+                                    <div class="testimonial-card-header">
+                                        <div class="testimonial-role-badge teammate-badge">
+                                            <span class="role-icon" aria-hidden="true">👥</span>
+                                            <span>Teammate Feedback</span>
+                                        </div>
+                                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                    <blockquote class="testimonial-quote">
+                                        &ldquo;Collaborating with Maitri on our Smart India Hackathon (SIH 2026) MindCare prototype was an inspiring experience. Under 36-hour sprint deadlines, her composure, frontend architecture, and seamless voice AI integration made our project a standout finalist.&rdquo;
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar-badge teammate-avatar">SP</div>
+                                        <div class="author-info">
+                                            <h3 class="author-name">Sneha Patel</h3>
+                                            <p class="author-role">SIH 2026 Team Lead &bull; Hackathon Collaborator</p>
+                                        </div>
+                                    </div>
+                                    <span class="editable-placeholder-tag" title="Easily customizable placeholder content">✎ Editable Placeholder</span>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3: Mentor Feedback (Editable Placeholder) -->
+                            <div class="testimonial-slide" data-slide="2" data-category="mentor" data-editable="true">
+                                <div class="testimonial-glass-card">
+                                    <div class="testimonial-card-glow" aria-hidden="true"></div>
+                                    <div class="testimonial-card-header">
+                                        <div class="testimonial-role-badge mentor-badge">
+                                            <span class="role-icon" aria-hidden="true">💡</span>
+                                            <span>Mentor Feedback</span>
+                                        </div>
+                                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                    <blockquote class="testimonial-quote">
+                                        &ldquo;Maitri has a remarkable intuition for system design and clean code practices. When tackling new technologies, she dives deep into documentation, asks the right technical questions, and produces production-grade code that is modular and maintainable.&rdquo;
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar-badge mentor-avatar">AK</div>
+                                        <div class="author-info">
+                                            <h3 class="author-name">Arun Kumar</h3>
+                                            <p class="author-role">Senior Engineering Mentor &bull; Technical Advisor</p>
+                                        </div>
+                                    </div>
+                                    <span class="editable-placeholder-tag" title="Easily customizable placeholder content">✎ Editable Placeholder</span>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4: Project Feedback (Editable Placeholder) -->
+                            <div class="testimonial-slide" data-slide="3" data-category="project" data-editable="true">
+                                <div class="testimonial-glass-card">
+                                    <div class="testimonial-card-glow" aria-hidden="true"></div>
+                                    <div class="testimonial-card-header">
+                                        <div class="testimonial-role-badge project-badge">
+                                            <span class="role-icon" aria-hidden="true">🚀</span>
+                                            <span>Project Feedback &bull; MindCare &amp; Ninu</span>
+                                        </div>
+                                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                    <blockquote class="testimonial-quote">
+                                        &ldquo;The empathetic user interface designed for MindCare’s dementia patients sets a remarkable standard for assistive technology. The accessibility, voice interactions, and responsive book community features in Ninu reflect an engineer who crafts software with heart and precision.&rdquo;
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar-badge project-avatar">EV</div>
+                                        <div class="author-info">
+                                            <h3 class="author-name">Eleanor Vance &amp; Beta Reviewers</h3>
+                                            <p class="author-role">Healthcare UX Advisor &bull; Platform Evaluator</p>
+                                        </div>
+                                    </div>
+                                    <span class="editable-placeholder-tag" title="Easily customizable placeholder content">✎ Editable Placeholder</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button type="button" class="carousel-control-btn next-btn" id="carousel-next" aria-label="Next Testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Carousel Dot Pagination Indicators -->
+                <div class="carousel-dots-pagination" id="carousel-dots" role="tablist" aria-label="Testimonial slides pagination">
+                    <button type="button" class="carousel-dot active" role="tab" aria-selected="true" aria-label="Slide 1: Teacher feedback" data-index="0"></button>
+                    <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 2: Teammate feedback" data-index="1"></button>
+                    <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 3: Mentor feedback" data-index="2"></button>
+                    <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 4: Project feedback" data-index="3"></button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             9. AI ASSISTANT SECTION
+             Meet My Portfolio AI (Instant Answers for About, Skills, Projects, MindCare, SIH 2026, Education)
+             ============================================================= -->
+        <section id="chat" class="chat-section" aria-labelledby="chat-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Real-time Intelligent Assistant</span>
+                    <h2 id="chat-title" class="section-title">Meet My Portfolio AI</h2>
+                    <p class="section-description">
+                        Curious about my background, technical lab skills, or hackathon projects? Click a quick prompt or type your question below for instant answers.
+                    </p>
+                </div>
+
+                <div class="chat-box-card">
+                    <!-- Chat Header -->
+                    <div class="chat-box-header">
+                        <div class="chat-bot-identity">
+                            <div class="chat-bot-avatar" aria-hidden="true">🤖</div>
+                            <div>
+                                <h3 class="chat-bot-title">Meet My Portfolio AI</h3>
+                                <span class="chat-bot-status"><span class="pulse-dot"></span> Online &bull; Instant Knowledge Base</span>
+                            </div>
+                        </div>
+                        <span class="chat-badge-neon">Futuristic AI</span>
+                    </div>
+
+                    <!-- Chat Messages Flow -->
+                    <div class="chat-messages-container" id="chat-messages">
+                        <div class="chat-message bot-msg">
+                            <div class="msg-bubble">
+                                👋 Hello! I'm <strong>Maitri's Portfolio AI</strong>. Ask me anything about her journey, core skills, featured projects like <strong>MindCare (SIH 2026)</strong> and <strong>Ninu</strong>, or her education!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Question Chips (About, Skills, Projects, MindCare, SIH 2026, Education) -->
+                    <div class="chat-prompt-chips" aria-label="Quick questions about Maitri">
+                        <button type="button" class="prompt-chip" data-query="About">👤 About</button>
+                        <button type="button" class="prompt-chip" data-query="Skills">💻 Skills</button>
+                        <button type="button" class="prompt-chip" data-query="Projects">🚀 Projects</button>
+                        <button type="button" class="prompt-chip" data-query="MindCare">🧠 MindCare</button>
+                        <button type="button" class="prompt-chip" data-query="SIH 2026">🏆 SIH 2026</button>
+                        <button type="button" class="prompt-chip" data-query="Education">🎓 Education</button>
+                    </div>
+
+                    <!-- Chat Input Form -->
+                    <form id="chat-form" class="chat-input-row">
+                        <input type="text" id="chat-user-input" class="chat-input" placeholder="Ask about About, Skills, Projects, MindCare, SIH 2026, Education..." autocomplete="off" required>
+                        <button type="submit" class="btn btn-primary chat-send-btn" aria-label="Send Question">
+                            <span>Send</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =============================================================
+             10. CONTACT SECTION
+             "Let's Connect" with Email, LinkedIn, GitHub, and Simple Contact Form
+             ============================================================= -->
+        <section id="contact" class="contact-section" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 id="contact-title" class="section-title">Let’s Connect</h2>
+                    <p class="section-description">
+                        Have an opportunity, questions about my projects, or looking to collaborate? Drop me a message or connect through my links!
+                    </p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <!-- Left Column: Direct Links (Email, LinkedIn, GitHub) -->
+                    <div class="contact-info">
+                        <h3 class="contact-info-title">Connect Directly</h3>
+                        <p class="contact-info-desc">
+                            I am open to software engineering internships, graduate roles, and open-source collaborations.
+                        </p>
+
+                        <div class="contact-channels-grid">
+                            <!-- Email Card -->
+                            <a href="mailto:maitripujar7@gmail.com" class="contact-channel-card" id="contact-email-link" aria-label="Send email to maitripujar7@gmail.com">
+                                <div class="channel-icon-box email-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                </div>
+                                <div class="channel-meta">
+                                    <span class="channel-label">Email</span>
+                                    <span class="channel-value">maitripujar7@gmail.com</span>
+                                </div>
+                                <span class="channel-arrow" aria-hidden="true">&rarr;</span>
+                            </a>
+
+                            <!-- GitHub Card -->
+                            <a href="https://github.com/maitripujar18-art" target="_blank" rel="noopener noreferrer" class="contact-channel-card" id="contact-github-link" aria-label="Visit Maitri's GitHub Profile">
+                                <div class="channel-icon-box github-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="channel-meta">
+                                    <span class="channel-label">GitHub</span>
+                                    <span class="channel-value">github.com/maitripujar18-art</span>
+                                </div>
+                                <span class="channel-arrow" aria-hidden="true">&rarr;</span>
+                            </a>
+
+                            <!-- LinkedIn Card -->
+                            <a href="https://www.linkedin.com/in/mohith-b-y-3ba157396?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-channel-card" id="contact-linkedin-link" aria-label="Visit LinkedIn Profile">
+                                <div class="channel-icon-box linkedin-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
+                                    </svg>
+                                </div>
+                                <div class="channel-meta">
+                                    <span class="channel-label">LinkedIn</span>
+                                    <span class="channel-value">linkedin.com/in/mohith-b-y</span>
+                                </div>
+                                <span class="channel-arrow" aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+
+                        <!-- Availability Badge -->
+                        <div class="contact-status-card">
+                            <span class="status-pulse-dot" aria-hidden="true"></span>
+                            <div>
+                                <strong>Status: Open to Opportunities</strong>
+                                <p>Actively preparing for Software Engineering roles &bull; 2026 graduate</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Simple Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form" action="#" method="POST" novalidate>
+                            <h3 class="form-title">Send a Direct Message</h3>
+
+                            <div class="form-group">
+                                <label for="sender-name">Your Name <span class="required">*</span></label>
+                                <input type="text" id="sender-name" name="name" class="form-input" placeholder="e.g. Alex Sharma" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-email">Your Email <span class="required">*</span></label>
+                                <input type="email" id="sender-email" name="email" class="form-input" placeholder="e.g. alex@company.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message-subject">Subject</label>
+                                <input type="text" id="message-subject" name="subject" class="form-input" placeholder="e.g. Project Discussion or Engineering Role">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-message">Message <span class="required">*</span></label>
+                                <textarea id="sender-message" name="message" class="form-textarea" rows="4" placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <!-- Live Form Status Message Area -->
+                            <div id="contact-form-feedback" class="form-feedback" hidden></div>
+
+                            <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
+                                <span>Send Message</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16" aria-hidden="true">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =================================================================
+         FOOTER
+         Maitri K Pujar, Navigation Links, Social Icons, Back to Top,
+         and "Learning • Building • Exploring • Growing" Tagline
+         ================================================================= -->
+    <footer id="footer" class="site-footer">
+        <div class="container footer-container">
+
+            <!-- Footer Top Row -->
+            <div class="footer-top-row">
+                <!-- Brand Info -->
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo" aria-label="Maitri K Pujar Home">
+                        <span class="logo-code-symbol">&lt;</span>
+                        <span class="logo-name-text">Maitri K Pujar</span>
+                        <span class="logo-code-symbol"> /&gt;</span>
+                    </a>
+                    <!-- Required Tagline -->
+                    <div class="footer-tagline-badge">
+                        <span class="spark-icon" aria-hidden="true">✨</span>
+                        <span>Learning &bull; Building &bull; Exploring &bull; Growing</span>
+                    </div>
+                    <p class="footer-bio-snippet">
+                        Computer Science &amp; Engineering Student passionate about software development, AI systems, and modern web architectures.
+                    </p>
+                </div>
+
+                <!-- Footer Navigation Links -->
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#hero" class="footer-nav-link">Home</a></li>
+                        <li><a href="#about" class="footer-nav-link">About Me</a></li>
+                        <li><a href="#skills" class="footer-nav-link">Skills</a></li>
+                        <li><a href="#tech-stack" class="footer-nav-link">Tech Stack</a></li>
+                        <li><a href="#timeline" class="footer-nav-link">Timeline</a></li>
+                        <li><a href="#projects" class="footer-nav-link">Projects</a></li>
+                        <li><a href="#testimonials" class="footer-nav-link">Testimonials</a></li>
+                        <li><a href="#contact" class="footer-nav-link">Contact</a></li>
+                        <li><a href="assets/Maitri_Resume.pdf" target="_blank" rel="noopener noreferrer" class="footer-nav-link footer-resume-link" style="color: var(--neon-cyan); font-weight: 600;">Resume (PDF) ↗</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Social Icons & Back to Top -->
+                <div class="footer-connect-group">
+                    <h4 class="footer-heading">Social Profiles</h4>
+                    <div class="footer-social-icons">
+                        <!-- GitHub -->
+                        <a href="https://github.com/maitripujar18-art" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub Profile">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                            </svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/mohith-b-y-3ba157396?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn Profile">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
+                            </svg>
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:maitripujar7@gmail.com" class="footer-social-btn" aria-label="Send Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Back to Top Button -->
+                    <a href="#hero" class="btn btn-sm btn-outline back-to-top-btn" id="back-to-top-trigger" aria-label="Scroll back to top of page">
+                        <span>Back to Top</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16" aria-hidden="true">
+                            <line x1="12" y1="19" x2="12" y2="5"></line>
+                            <polyline points="5 12 12 5 19 12"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Row: Copyright & Legal -->
+            <div class="footer-bottom-row">
+                <p class="copyright-text">
+                    &copy; <span id="current-year">2026</span> <strong>Maitri K Pujar</strong>. Designed &amp; Engineered with Futuristic Glassmorphism &amp; Soft Neon.
+                </p>
+                <p class="footer-sub-note">All rights reserved &bull; Computer Science Engineering Portfolio</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- =================================================================
+         FLOATING ‘MEET MY PORTFOLIO AI’ CHATBOT WIDGET
+         Persistent glowing floating trigger + interactive collapsible AI chat window
+         ================================================================= -->
+    <div id="floating-ai-container" class="floating-ai-container">
+        <!-- Floating Trigger Button -->
+        <button type="button" id="floating-ai-launcher" class="floating-ai-launcher" aria-label="Open Meet My Portfolio AI Chatbot" aria-expanded="false" aria-controls="floating-ai-widget">
+            <span class="floating-ai-pulse" aria-hidden="true"></span>
+            <span class="floating-ai-icon" aria-hidden="true">🤖</span>
+            <span class="floating-ai-label">Meet My Portfolio AI</span>
+        </button>
+
+        <!-- Floating Collapsible Chatbot Modal Window -->
+        <div id="floating-ai-widget" class="floating-ai-widget" role="dialog" aria-modal="false" aria-label="Portfolio AI Chat Assistant" hidden>
+            <div class="floating-ai-inner">
+                <!-- Header with Close & Minimize -->
+                <div class="floating-ai-header">
+                    <div class="floating-ai-title-wrap">
+                        <span class="floating-ai-avatar" aria-hidden="true">🤖</span>
+                        <div>
+                            <h4 class="floating-ai-heading">Meet My Portfolio AI</h4>
+                            <span class="floating-ai-status"><span class="pulse-dot"></span> Ready to help</span>
+                        </div>
+                    </div>
+                    <button type="button" id="floating-ai-close" class="floating-ai-close-btn" aria-label="Close AI Assistant Window">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Messages Stream -->
+                <div class="floating-ai-messages" id="floating-ai-messages">
+                    <div class="chat-message bot-msg">
+                        <div class="msg-bubble">
+                            ✨ Hi! I'm <strong>Maitri's Portfolio AI</strong>. Ask me anything about her About, Skills, Projects, MindCare, SIH 2026, or Education!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Prompt Chips -->
+                <div class="floating-ai-chips" aria-label="Quick question chips">
+                    <button type="button" class="floating-chip" data-query="About">👤 About</button>
+                    <button type="button" class="floating-chip" data-query="Skills">💻 Skills</button>
+                    <button type="button" class="floating-chip" data-query="Projects">🚀 Projects</button>
+                    <button type="button" class="floating-chip" data-query="MindCare">🧠 MindCare</button>
+                    <button type="button" class="floating-chip" data-query="SIH 2026">🏆 SIH 2026</button>
+                    <button type="button" class="floating-chip" data-query="Education">🎓 Education</button>
+                </div>
+
+                <!-- Input Row -->
+                <form id="floating-ai-form" class="floating-ai-input-row">
+                    <input type="text" id="floating-ai-input" class="floating-ai-input" placeholder="Ask about Skills, Projects, MindCare..." autocomplete="off" required>
+                    <button type="submit" class="floating-ai-send-btn" aria-label="Send question">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Placeholder (for theme toggle, form handling, and interactions) -->
+    <script src="script.js"></script>
+</body>
+</html>
